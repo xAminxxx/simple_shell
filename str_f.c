@@ -1,22 +1,6 @@
 #include "simple_shell.h"
 
 /**
- * length_str - it prints the string's length
- * @str: string
- * Return: number presenting string's length.
- */
-int length_str(char *str)
-{
-	int l = 0;
-
-	if (!str)
-		return (0);
-	while (*str++)
-		l++;
-	return (l);
-}
-
-/**
  * com_str - compare two strings
  * @str1: string 1
  * @str2: string 2
@@ -36,19 +20,20 @@ int com_str(char *str1, char *str2)
 	else
 		return (*str1 < *str2 ? -1 : 1);
 }
-
 /**
- * check_start - checks if substring starts with hay
- * @hay: string
- * @substring: the string to find
- * Return: NULL or the address of next char of hay.
+ * length_str - it prints the string's length
+ * @str: string
+ * Return: number presenting string's length.
  */
-int check_start(const char *substring, const char *hay)
+int length_str(char *str)
 {
-	while (*substring)
-		if (*substring++ != *hay++)
-			return (NULL);
-	return ((char *)hay);
+	int l = 0;
+
+	if (!str)
+		return (0);
+	while (*str++)
+		l++;
+	return (l);
 }
 
 /**
@@ -67,4 +52,18 @@ char *concat_str(char *destination, char *source)
 		*destination++ = *source++;
 	*destination = *source;
 	return (dest);
+}
+
+/**
+ * check_start - checks if substring starts with hay
+ * @hay: string
+ * @substring: the string to find
+ * Return: NULL or the address of next char of hay.
+ */
+int check_start(const char *substring, const char *hay)
+{
+	while (*substring)
+		if (*substring++ != *hay++)
+			return (NULL);
+	return ((char *)hay);
 }
