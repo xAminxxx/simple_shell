@@ -2,29 +2,29 @@
 /**
  * _dup - multiplicate a string
  * @word: the string to multiplicate
- * Return: multiplicated word's pointer 
+ * Return: multiplicated word's pointer
  */
 char *_dup(const char *word)
 {
-        int len = 0;
-        char *result;
+	int len = 0;
 
-        if (word == NULL)
-                return (NULL);
-        while (*word++)
-                len++;
-        result = malloc(sizeof(char) * (length + 1));
-        if (!result)
-                return (NULL);
-        for (len++; len--;)
-                result[len] = *--word;
-        return (result);
+	char *result;
+
+	if (word == NULL)
+		return (NULL);
+	while (*word++)
+		len++;
+	result = malloc(sizeof(char) * (length + 1));
+	if (!result)
+		return (NULL);
+	for (len++; len--;)
+		result[len] = *--word;
+	return (result);
 }
-
 /**
  * _cpy - copy a word
  * @pasted: the copied txt
- * @copied: the source to copy from 
+ * @copied: the source to copy from
  * Return: the copied txt's pointer
  */
 char *_cpy(char *pasted, char *copied)
