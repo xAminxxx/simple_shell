@@ -34,22 +34,21 @@ int str_to_int(char *str)
 			res *= 10;
 			res += (str[i] - '0');
 		}
-		else if (f ==1)
+		else if (f == 1)
 			f = 2;
 	}
-
 	if (s == 1)
 		result = -res;
 	else
 		result = res;
-	
+
 	return (result);
 }
 
 /**
- * check_alpa - checks if the character is alphabetic 
+ * check_alpha - checks if the character is alphabetic
  * @ch: the character to check
- * Retunr: 1 if the character is alphabetic or 0 if it isn't
+ * Return: 1 if the character is alphabetic or 0 if it isn't
  */
 int check_alpha(char ch)
 {
