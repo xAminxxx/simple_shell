@@ -42,5 +42,7 @@ void *re_allo(void *r, unsigned int new_s, unsigned int prev_s);
 /* m_operationII.c */
 int ptr_free(void **p);
 
+/* operation_1.c */
+int check_delimit( char ch, char *del);
 
 #endif

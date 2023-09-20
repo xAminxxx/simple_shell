@@ -17,7 +17,7 @@ char **strsplit(char *txt, char *del)
 	if (!del)
 		del = " ";
 	for (i = 0; txt[i] != '\0'; i++)
-		if (!is_delim(txt[i], d) && (is_delim(str[i + 1], d) || !str[i + 1]))
+		if (!check_delimit(txt[i], d) && (check_delimit(str[i + 1], d) || !str[i + 1]))
 			nbwords++;
 
 	if (nbwords == 0)
@@ -27,10 +27,10 @@ char **strsplit(char *txt, char *del)
 		return (NULL);
 	for (i = 0, j = 0; j < nbwords; j++)
 	{
-		while (is_delim(txt[i], del))
+		while (check_delimit(txt[i], del))
 			i++;
 		k = 0;
-		while (!is_delim(txt[i + k], del) && txt[i + k])
+		while (!check_delimit(txt[i + k], del) && txt[i + k])
 			k++;
 		result[j] = malloc((k + 1) * sizeof(char));
 		if (!result[j])
