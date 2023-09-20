@@ -6,7 +6,7 @@
  * @del: the delimeter
  * Return: 1 if true or 0 if false
  */
-int check_delimit( char ch, char *del)
+int check_delimit(char ch, char *del)
 {
 	while (*del)
 		if (*del++ == ch)
