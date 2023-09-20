@@ -1,7 +1,7 @@
 #include "simple_shell.h"
 
 /**
- * ptr_free - frees the pointer
+ * ptr_free - frees the pointer and returns the address to NULL.
  * @p: pointer's address
  * Return: 1 if it is free, 0 if not.
  */
