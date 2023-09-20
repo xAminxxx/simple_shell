@@ -44,5 +44,8 @@ int ptr_free(void **p);
 
 /* operation_1.c */
 int check_delimit( char ch, char *del);
+int str_to_int(char *str);
+int check_alpha(char ch);
+
 
 #endif
